@@ -1,0 +1,19 @@
+<div class="app-container">
+  <div>
+    <app-categories (selectedCategoryEmitter)="filterAnnouncementBasedOnCategory($event)">
+
+    </app-categories>
+  </div>
+</div>
+
+<div class="announcement">
+  <div *ngFor="let announcement of filteredAnnouncements">
+    <div class="app-container">
+      <app-announcement 
+      [title]=announcement.title
+      [author]=announcement.author 
+      [message]=announcement.message>
+    </app-announcement>
+    </div>
+  </div>
+</div>
